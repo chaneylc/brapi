@@ -17,8 +17,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.brapi.client.v2.ApiCallback;
-import org.brapi.client.v2.BrAPIClient;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.Configuration;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.v2.model.core.response.BrAPICommonCropNamesResponse;

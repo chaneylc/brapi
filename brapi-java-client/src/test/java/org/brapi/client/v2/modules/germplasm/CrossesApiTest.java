@@ -12,7 +12,6 @@
 
 package org.brapi.client.v2.modules.germplasm;
 
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.germplasm.CrossQueryParams;
 import org.brapi.client.v2.model.queryParams.germplasm.PlannedCrossQueryParams;

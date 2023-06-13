@@ -16,7 +16,7 @@ import org.brapi.v2.model.pheno.BrAPIImage;
  * ImageListResponseResult
  */
 
-
+//done
 public class BrAPIImageListResponseResult implements BrAPIResponseResult<BrAPIImage>  {
   @JsonProperty("data")
   @Valid

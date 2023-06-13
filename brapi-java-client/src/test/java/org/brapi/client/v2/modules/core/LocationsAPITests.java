@@ -25,7 +25,6 @@ import com.google.gson.JsonObject;
 import lombok.SneakyThrows;
 
 import org.apache.commons.lang3.tuple.Pair;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.BrAPIClientTest;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.core.LocationQueryParams;

@@ -5,6 +5,8 @@ import org.brapi.v2.model.BrAPIEnum;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
+
+//done
 public enum BrAPIPositionCoordinateTypeEnum implements BrAPIEnum {
     LONGITUDE("LONGITUDE"),
     LATITUDE("LATITUDE"),

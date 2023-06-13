@@ -36,6 +36,12 @@ public class BrAPITrait {
 	@JsonProperty("entity")
 	private String entity = null;
 
+	@JsonProperty("entityPUI")
+	private String entityPUI = null;
+
+	@JsonProperty("attributePUI")
+	private String attributePUI = null;
+
 	@JsonProperty("externalReferences")
 	private List<BrAPIExternalReference> externalReferences = null;
 
@@ -63,6 +69,9 @@ public class BrAPITrait {
 
 	@JsonProperty("traitDbId")
 	private String traitDbId = null;
+
+	@JsonProperty("traitPUI")
+	private String traitPUI = null;
 
 	private final transient Gson gson = new Gson();
 
@@ -167,6 +176,42 @@ public class BrAPITrait {
 	public BrAPITrait entity(String entity) {
 		this.entity = entity;
 		return this;
+	}
+
+	public BrAPITrait attributePUI(String attributePUI) {
+		this.attributePUI = attributePUI;
+		return this;
+	}
+
+	/**
+	 * The Permanent Unique Identifier of a Trait Attribute, usually in the form of a URI &lt;br/&gt;A trait can be decomposed as \&quot;Trait\&quot; &#x3D; \&quot;Entity\&quot; + \&quot;Attribute\&quot;, the attribute is the observed feature (or characteristic) of the entity e.g., for \&quot;grain colour\&quot;, attribute &#x3D; \&quot;colour\&quot;
+	 *
+	 * @return attributePUI
+	 **/
+	public String getAttributePUI() {
+		return attributePUI;
+	}
+
+	public void setAttributePUI(String attributePUI) {
+		this.attributePUI = attributePUI;
+	}
+
+	public BrAPITrait entityPUI(String entityPUI) {
+		this.entityPUI = entityPUI;
+		return this;
+	}
+
+	/**
+	 * The Permanent Unique Identifier of a Trait Entity, usually in the form of a URI &lt;br/&gt;A Trait can be decomposed as \&quot;Trait\&quot; &#x3D; \&quot;Entity\&quot; + \&quot;Attribute\&quot;, the Entity is the part of the plant that the trait refers to e.g., for \&quot;grain colour\&quot;, entity &#x3D; \&quot;grain\&quot;
+	 *
+	 * @return entityPUI
+	 **/
+	public String getEntityPUI() {
+		return entityPUI;
+	}
+
+	public void setEntityPUI(String entityPUI) {
+		this.entityPUI = entityPUI;
 	}
 
 	/**
@@ -360,8 +405,26 @@ public class BrAPITrait {
 		this.traitName = traitName;
 	}
 
+	public BrAPITrait traitPUI(String traitPUI) {
+		this.traitPUI = traitPUI;
+		return this;
+	}
+
+	/**
+	 * The Permanent Unique Identifier of a Trait, usually in the form of a URI
+	 *
+	 * @return traitPUI
+	 **/
+	public String getTraitPUI() {
+		return traitPUI;
+	}
+
+	public void setTraitPUI(String traitPUI) {
+		this.traitPUI = traitPUI;
+	}
+
 	@Override
-	public boolean equals(java.lang.Object o) {
+	public boolean equals(Object o) {
 		if (this == o) {
 			return true;
 		}
@@ -369,42 +432,51 @@ public class BrAPITrait {
 			return false;
 		}
 		BrAPITrait trait = (BrAPITrait) o;
-		return Objects.equals(this.traitDbId, trait.traitDbId)
-				&& Objects.equals(this.alternativeAbbreviations, trait.alternativeAbbreviations)
-				&& Objects.equals(this.attribute, trait.attribute)
-				&& Objects.equals(this.entity, trait.entity)
-				&& Objects.equals(this.externalReferences, trait.externalReferences)
-				&& Objects.equals(this.mainAbbreviation, trait.mainAbbreviation)
-				&& Objects.equals(this.ontologyReference, trait.ontologyReference)
-				&& Objects.equals(this.status, trait.status)
-				&& Objects.equals(this.synonyms, trait.synonyms)
-				&& Objects.equals(this.traitClass, trait.traitClass)
-				&& Objects.equals(this.traitDescription, trait.traitDescription)
-				&& Objects.equals(this.traitName, trait.traitName);
+		return Objects.equals(this.additionalInfo, trait.additionalInfo) &&
+				Objects.equals(this.alternativeAbbreviations, trait.alternativeAbbreviations) &&
+				Objects.equals(this.attribute, trait.attribute) &&
+				Objects.equals(this.attributePUI, trait.attributePUI) &&
+				Objects.equals(this.entity, trait.entity) &&
+				Objects.equals(this.entityPUI, trait.entityPUI) &&
+				Objects.equals(this.externalReferences, trait.externalReferences) &&
+				Objects.equals(this.mainAbbreviation, trait.mainAbbreviation) &&
+				Objects.equals(this.ontologyReference, trait.ontologyReference) &&
+				Objects.equals(this.status, trait.status) &&
+				Objects.equals(this.synonyms, trait.synonyms) &&
+				Objects.equals(this.traitClass, trait.traitClass) &&
+				Objects.equals(this.traitDbId, trait.traitDbId) &&
+				Objects.equals(this.traitDescription, trait.traitDescription) &&
+				Objects.equals(this.traitName, trait.traitName) &&
+				Objects.equals(this.traitPUI, trait.traitPUI);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(traitDbId, alternativeAbbreviations, attribute, entity, externalReferences, mainAbbreviation,
-							ontologyReference, status, synonyms, traitClass, traitDescription, traitName);
+		return Objects.hash(additionalInfo, alternativeAbbreviations, attribute, attributePUI, entity, entityPUI, externalReferences, mainAbbreviation, ontologyReference, status, synonyms, traitClass, traitDbId, traitDescription, traitName, traitPUI);
 	}
+
 
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("class Trait {\n");
-		sb.append("    traitDbId: ").append(toIndentedString(traitDbId)).append("\n");
+
+		sb.append("    additionalInfo: ").append(toIndentedString(additionalInfo)).append("\n");
 		sb.append("    alternativeAbbreviations: ").append(toIndentedString(alternativeAbbreviations)).append("\n");
 		sb.append("    attribute: ").append(toIndentedString(attribute)).append("\n");
+		sb.append("    attributePUI: ").append(toIndentedString(attributePUI)).append("\n");
 		sb.append("    entity: ").append(toIndentedString(entity)).append("\n");
+		sb.append("    entityPUI: ").append(toIndentedString(entityPUI)).append("\n");
 		sb.append("    externalReferences: ").append(toIndentedString(externalReferences)).append("\n");
 		sb.append("    mainAbbreviation: ").append(toIndentedString(mainAbbreviation)).append("\n");
 		sb.append("    ontologyReference: ").append(toIndentedString(ontologyReference)).append("\n");
 		sb.append("    status: ").append(toIndentedString(status)).append("\n");
 		sb.append("    synonyms: ").append(toIndentedString(synonyms)).append("\n");
 		sb.append("    traitClass: ").append(toIndentedString(traitClass)).append("\n");
+		sb.append("    traitDbId: ").append(toIndentedString(traitDbId)).append("\n");
 		sb.append("    traitDescription: ").append(toIndentedString(traitDescription)).append("\n");
 		sb.append("    traitName: ").append(toIndentedString(traitName)).append("\n");
+		sb.append("    traitPUI: ").append(toIndentedString(traitPUI)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

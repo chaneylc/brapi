@@ -15,7 +15,7 @@ import org.brapi.v2.model.pheno.BrAPIObservation;
  * ObservationSingleResponse
  */
 
-
+//done
 public class BrAPIObservationSingleResponse implements BrAPIResponse<BrAPIObservation>  {
   @JsonProperty("@context")
   private BrAPIContext _atContext = null;

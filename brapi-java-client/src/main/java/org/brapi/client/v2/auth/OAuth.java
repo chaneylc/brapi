@@ -12,6 +12,9 @@
 
 package org.brapi.client.v2.auth;
 
+import org.brapi.client.v2.Pair;
+
+import java.util.List;
 import java.util.Map;
 
 public class OAuth implements Authentication {
@@ -26,7 +29,7 @@ public class OAuth implements Authentication {
   }
 
   @Override
-  public void applyToParams(Map<String, String> queryParams, Map<String, String> headerParams) {
+  public void applyToParams(List<Pair> queryParams, Map<String, String> headerParams) {
     if (accessToken != null) {
       headerParams.put("Authorization", "Bearer " + accessToken);
     }

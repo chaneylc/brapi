@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * BasePagination
  */
 
-
+//done
 public abstract class BrAPIPagination {
 	@JsonProperty("pageSize")
 	private Integer pageSize = 1000;

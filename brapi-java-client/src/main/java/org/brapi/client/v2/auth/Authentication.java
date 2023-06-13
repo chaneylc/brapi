@@ -12,6 +12,9 @@
 
 package org.brapi.client.v2.auth;
 
+import org.brapi.client.v2.Pair;
+
+import java.util.List;
 import java.util.Map;
 
 public interface Authentication {
@@ -21,5 +24,5 @@ public interface Authentication {
      * @param queryParams List of query parameters
      * @param headerParams Map of header parameters
      */
-    void applyToParams(Map<String, String> queryParams, Map<String, String> headerParams);
+    void applyToParams(List<Pair> queryParams, Map<String, String> headerParams);
 }

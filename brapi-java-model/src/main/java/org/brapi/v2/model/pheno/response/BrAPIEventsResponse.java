@@ -13,7 +13,7 @@ import org.brapi.v2.model.BrAPIMetadata;
 /**
  * EventsResponse
  */
-
+//done
 
 public class BrAPIEventsResponse implements BrAPIResponse<BrAPIEventsResponseResult>  {
   @JsonProperty("@context")
@@ -29,8 +29,6 @@ public class BrAPIEventsResponse implements BrAPIResponse<BrAPIEventsResponseRes
     this._atContext = _atContext;
     return this;
   }
-
-  
 
   public void setAtContext(BrAPIContext _atContext) {
     this._atContext = _atContext;

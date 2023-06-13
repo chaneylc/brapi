@@ -18,9 +18,16 @@ import org.brapi.v2.model.BrAPISearchRequestParametersPaging;
 
 
 public class BrAPIImageSearchRequest extends BrAPISearchRequestParametersPaging {
+
+	@JsonProperty("commonCropNames")
+	private List<String> commonCropNames = null;
+
 	@JsonProperty("externalReferenceIDs")
 	@Valid
 	private List<String> externalReferenceIDs = null;
+
+	@JsonProperty("externalReferenceIds")
+	private List<String> externalReferenceIds = null;
 
 	@JsonProperty("externalReferenceSources")
 	@Valid
@@ -81,6 +88,11 @@ public class BrAPIImageSearchRequest extends BrAPISearchRequestParametersPaging 
 	@Valid
 	private List<String> observationUnitDbIds = null;
 
+	@JsonProperty("programDbIds")
+	private List<String> programDbIds = null;
+
+	@JsonProperty("programNames")
+	private List<String> programNames = null;
 
 	public BrAPIImageSearchRequest addImageDbIdsItem(String imageDbIdsItem) {
 		if (this.imageDbIds == null) {
@@ -124,6 +136,53 @@ public class BrAPIImageSearchRequest extends BrAPISearchRequestParametersPaging 
 
 	public void setExternalReferenceIDs(List<String> externalReferenceIDs) {
 		this.externalReferenceIDs = externalReferenceIDs;
+	}
+
+	public BrAPIImageSearchRequest externalReferenceIds(List<String> externalReferenceIds) {
+		this.externalReferenceIds = externalReferenceIds;
+		return this;
+	}
+
+	public BrAPIImageSearchRequest addExternalReferenceIdsItem(String externalReferenceIdsItem) {
+		if (this.externalReferenceIds == null) {
+			this.externalReferenceIds = new ArrayList<String>();
+		}
+		this.externalReferenceIds.add(externalReferenceIdsItem);
+		return this;
+	}
+
+	/**
+	 * List of external reference IDs. Could be a simple strings or a URIs. (use with &#x60;externalReferenceSources&#x60; parameter)
+	 *
+	 * @return externalReferenceIds
+	 **/
+	public List<String> getExternalReferenceIds() {
+		return externalReferenceIds;
+	}
+
+	public void setExternalReferenceIds(List<String> externalReferenceIds) {
+		this.externalReferenceIds = externalReferenceIds;
+	}
+
+	public BrAPIImageSearchRequest commonCropNames(List<String> commonCropNames) {
+		this.commonCropNames = commonCropNames;
+		return this;
+	}
+
+	public BrAPIImageSearchRequest addCommonCropNamesItem(String commonCropNamesItem) {
+		if (this.commonCropNames == null) {
+			this.commonCropNames = new ArrayList<String>();
+		}
+		this.commonCropNames.add(commonCropNamesItem);
+		return this;
+	}
+
+	public List<String> getCommonCropNames() {
+		return commonCropNames;
+	}
+
+	public void setCommonCropNames(List<String> commonCropNames) {
+		this.commonCropNames = commonCropNames;
 	}
 
 	public BrAPIImageSearchRequest externalReferenceSources(List<String> externalReferenceSources) {
@@ -506,8 +565,60 @@ public class BrAPIImageSearchRequest extends BrAPISearchRequestParametersPaging 
 		this.observationUnitDbIds = observationUnitDbIds;
 	}
 
+	public BrAPIImageSearchRequest programDbIds(List<String> programDbIds) {
+		this.programDbIds = programDbIds;
+		return this;
+	}
+
+	public BrAPIImageSearchRequest addProgramDbIdsItem(String programDbIdsItem) {
+		if (this.programDbIds == null) {
+			this.programDbIds = new ArrayList<String>();
+		}
+		this.programDbIds.add(programDbIdsItem);
+		return this;
+	}
+
+	/**
+	 * A BrAPI Program represents the high level organization or group who is responsible for conducting trials and studies. Things like Breeding Programs and Funded Projects are considered BrAPI Programs.   Use this parameter to only return results associated with the given programs.   Use &#x60;GET /programs&#x60; to find the list of available programs on a server.
+	 *
+	 * @return programDbIds
+	 **/
+	public List<String> getProgramDbIds() {
+		return programDbIds;
+	}
+
+	public void setProgramDbIds(List<String> programDbIds) {
+		this.programDbIds = programDbIds;
+	}
+
+	public BrAPIImageSearchRequest programNames(List<String> programNames) {
+		this.programNames = programNames;
+		return this;
+	}
+
+	public BrAPIImageSearchRequest addProgramNamesItem(String programNamesItem) {
+		if (this.programNames == null) {
+			this.programNames = new ArrayList<String>();
+		}
+		this.programNames.add(programNamesItem);
+		return this;
+	}
+
+	/**
+	 * Use this parameter to only return results associated with the given program names. Program names are not required to be unique.  Use &#x60;GET /programs&#x60; to find the list of available programs on a server.
+	 *
+	 * @return programNames
+	 **/
+	public List<String> getProgramNames() {
+		return programNames;
+	}
+
+	public void setProgramNames(List<String> programNames) {
+		this.programNames = programNames;
+	}
+
 	@Override
-	public boolean equals(java.lang.Object o) {
+	public boolean equals(Object o) {
 		if (this == o) {
 			return true;
 		}
@@ -515,42 +626,49 @@ public class BrAPIImageSearchRequest extends BrAPISearchRequestParametersPaging 
 			return false;
 		}
 		BrAPIImageSearchRequest imageSearchRequest = (BrAPIImageSearchRequest) o;
-		return Objects.equals(this.externalReferenceIDs, imageSearchRequest.externalReferenceIDs)
-				&& Objects.equals(this.externalReferenceSources, imageSearchRequest.externalReferenceSources)
-				&& Objects.equals(this.descriptiveOntologyTerms, imageSearchRequest.descriptiveOntologyTerms)
-				&& Objects.equals(this.imageFileNames, imageSearchRequest.imageFileNames)
-				&& Objects.equals(this.imageFileSizeMax, imageSearchRequest.imageFileSizeMax)
-				&& Objects.equals(this.imageFileSizeMin, imageSearchRequest.imageFileSizeMin)
-				&& Objects.equals(this.imageHeightMax, imageSearchRequest.imageHeightMax)
-				&& Objects.equals(this.imageHeightMin, imageSearchRequest.imageHeightMin)
-				&& Objects.equals(this.imageLocation, imageSearchRequest.imageLocation)
-				&& Objects.equals(this.imageNames, imageSearchRequest.imageNames)
-				&& Objects.equals(this.imageTimeStampRangeEnd, imageSearchRequest.imageTimeStampRangeEnd)
-				&& Objects.equals(this.imageTimeStampRangeStart, imageSearchRequest.imageTimeStampRangeStart)
-				&& Objects.equals(this.imageWidthMax, imageSearchRequest.imageWidthMax)
-				&& Objects.equals(this.imageWidthMin, imageSearchRequest.imageWidthMin)
-				&& Objects.equals(this.mimeTypes, imageSearchRequest.mimeTypes)
-				&& Objects.equals(this.observationDbIds, imageSearchRequest.observationDbIds)
-				&& Objects.equals(this.observationUnitDbIds, imageSearchRequest.observationUnitDbIds)
-				&& super.equals(o);
+		return Objects.equals(this.commonCropNames, imageSearchRequest.commonCropNames) &&
+				Objects.equals(this.descriptiveOntologyTerms, imageSearchRequest.descriptiveOntologyTerms) &&
+				Objects.equals(this.externalReferenceIDs, imageSearchRequest.externalReferenceIDs) &&
+				Objects.equals(this.externalReferenceIds, imageSearchRequest.externalReferenceIds) &&
+				Objects.equals(this.externalReferenceSources, imageSearchRequest.externalReferenceSources) &&
+				Objects.equals(this.imageDbIds, imageSearchRequest.imageDbIds) &&
+				Objects.equals(this.imageFileNames, imageSearchRequest.imageFileNames) &&
+				Objects.equals(this.imageFileSizeMax, imageSearchRequest.imageFileSizeMax) &&
+				Objects.equals(this.imageFileSizeMin, imageSearchRequest.imageFileSizeMin) &&
+				Objects.equals(this.imageHeightMax, imageSearchRequest.imageHeightMax) &&
+				Objects.equals(this.imageHeightMin, imageSearchRequest.imageHeightMin) &&
+				Objects.equals(this.imageLocation, imageSearchRequest.imageLocation) &&
+				Objects.equals(this.imageNames, imageSearchRequest.imageNames) &&
+				Objects.equals(this.imageTimeStampRangeEnd, imageSearchRequest.imageTimeStampRangeEnd) &&
+				Objects.equals(this.imageTimeStampRangeStart, imageSearchRequest.imageTimeStampRangeStart) &&
+				Objects.equals(this.imageWidthMax, imageSearchRequest.imageWidthMax) &&
+				Objects.equals(this.imageWidthMin, imageSearchRequest.imageWidthMin) &&
+				Objects.equals(this.mimeTypes, imageSearchRequest.mimeTypes) &&
+				Objects.equals(this.observationDbIds, imageSearchRequest.observationDbIds) &&
+				Objects.equals(this.observationUnitDbIds, imageSearchRequest.observationUnitDbIds) &&
+				Objects.equals(this.page, imageSearchRequest.page) &&
+				Objects.equals(this.pageSize, imageSearchRequest.pageSize) &&
+				Objects.equals(this.programDbIds, imageSearchRequest.programDbIds) &&
+				Objects.equals(this.programNames, imageSearchRequest.programNames);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(externalReferenceIDs, externalReferenceSources, descriptiveOntologyTerms, imageFileNames,
-				imageFileSizeMax, imageFileSizeMin, imageHeightMax, imageHeightMin, imageLocation, imageNames,
-				imageTimeStampRangeEnd, imageTimeStampRangeStart, imageWidthMax, imageWidthMin, mimeTypes,
-				observationDbIds, observationUnitDbIds, super.hashCode());
+		return Objects.hash(commonCropNames, descriptiveOntologyTerms, externalReferenceIDs, externalReferenceIds, externalReferenceSources, imageDbIds, imageFileNames, imageFileSizeMax, imageFileSizeMin, imageHeightMax, imageHeightMin, imageLocation, imageNames, imageTimeStampRangeEnd, imageTimeStampRangeStart, imageWidthMax, imageWidthMin, mimeTypes, observationDbIds, observationUnitDbIds, page, pageSize, programDbIds, programNames);
 	}
+
 
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("class ImageSearchRequest {\n");
-		sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-		sb.append("    externalReferenceIDs: ").append(toIndentedString(externalReferenceIDs)).append("\n");
-		sb.append("    externalReferenceSources: ").append(toIndentedString(externalReferenceSources)).append("\n");
+
+		sb.append("    commonCropNames: ").append(toIndentedString(commonCropNames)).append("\n");
 		sb.append("    descriptiveOntologyTerms: ").append(toIndentedString(descriptiveOntologyTerms)).append("\n");
+		sb.append("    externalReferenceIDs: ").append(toIndentedString(externalReferenceIDs)).append("\n");
+		sb.append("    externalReferenceIds: ").append(toIndentedString(externalReferenceIds)).append("\n");
+		sb.append("    externalReferenceSources: ").append(toIndentedString(externalReferenceSources)).append("\n");
+		sb.append("    imageDbIds: ").append(toIndentedString(imageDbIds)).append("\n");
 		sb.append("    imageFileNames: ").append(toIndentedString(imageFileNames)).append("\n");
 		sb.append("    imageFileSizeMax: ").append(toIndentedString(imageFileSizeMax)).append("\n");
 		sb.append("    imageFileSizeMin: ").append(toIndentedString(imageFileSizeMin)).append("\n");
@@ -565,6 +683,10 @@ public class BrAPIImageSearchRequest extends BrAPISearchRequestParametersPaging 
 		sb.append("    mimeTypes: ").append(toIndentedString(mimeTypes)).append("\n");
 		sb.append("    observationDbIds: ").append(toIndentedString(observationDbIds)).append("\n");
 		sb.append("    observationUnitDbIds: ").append(toIndentedString(observationUnitDbIds)).append("\n");
+		sb.append("    page: ").append(toIndentedString(page)).append("\n");
+		sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
+		sb.append("    programDbIds: ").append(toIndentedString(programDbIds)).append("\n");
+		sb.append("    programNames: ").append(toIndentedString(programNames)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

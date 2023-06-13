@@ -23,8 +23,6 @@ import java.util.Optional;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.brapi.client.v2.ApiCallback;
-import org.brapi.client.v2.BrAPIClient;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.Configuration;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.core.StudyQueryParams;
@@ -34,7 +32,6 @@ import org.brapi.v2.model.core.response.BrAPIStudyListResponse;
 import org.brapi.v2.model.core.request.BrAPIStudySearchRequest;
 import org.brapi.v2.model.core.response.BrAPIStudySingleResponse;
 import org.brapi.v2.model.core.response.BrAPIStudyTypesResponse;
-import org.brapi.v2.model.pheno.response.BrAPIObservationUnitListResponse;
 
 public class StudiesApi {
     private BrAPIClient apiClient;

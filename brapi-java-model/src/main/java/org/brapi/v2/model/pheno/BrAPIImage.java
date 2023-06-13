@@ -434,7 +434,7 @@ public class BrAPIImage  {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -442,12 +442,12 @@ public class BrAPIImage  {
       return false;
     }
     BrAPIImage image = (BrAPIImage) o;
-    return Objects.equals(this.imageDbId, image.imageDbId) &&
-            Objects.equals(this.additionalInfo, image.additionalInfo) &&
+    return Objects.equals(this.additionalInfo, image.additionalInfo) &&
             Objects.equals(this.copyright, image.copyright) &&
             Objects.equals(this.description, image.description) &&
             Objects.equals(this.descriptiveOntologyTerms, image.descriptiveOntologyTerms) &&
             Objects.equals(this.externalReferences, image.externalReferences) &&
+            Objects.equals(this.imageDbId, image.imageDbId) &&
             Objects.equals(this.imageFileName, image.imageFileName) &&
             Objects.equals(this.imageFileSize, image.imageFileSize) &&
             Objects.equals(this.imageHeight, image.imageHeight) &&
@@ -463,19 +463,21 @@ public class BrAPIImage  {
 
   @Override
   public int hashCode() {
-    return Objects.hash(imageDbId, additionalInfo, copyright, description, descriptiveOntologyTerms, externalReferences, imageFileName, imageFileSize, imageHeight, imageLocation, imageName, imageTimeStamp, imageURL, imageWidth, mimeType, observationDbIds, observationUnitDbId);
+    return Objects.hash(additionalInfo, copyright, description, descriptiveOntologyTerms, externalReferences, imageDbId, imageFileName, imageFileSize, imageHeight, imageLocation, imageName, imageTimeStamp, imageURL, imageWidth, mimeType, observationDbIds, observationUnitDbId);
   }
+
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Image {\n");
-    sb.append("    imageDbId: ").append(toIndentedString(imageDbId)).append("\n");
+
     sb.append("    additionalInfo: ").append(toIndentedString(additionalInfo)).append("\n");
     sb.append("    copyright: ").append(toIndentedString(copyright)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    descriptiveOntologyTerms: ").append(toIndentedString(descriptiveOntologyTerms)).append("\n");
     sb.append("    externalReferences: ").append(toIndentedString(externalReferences)).append("\n");
+    sb.append("    imageDbId: ").append(toIndentedString(imageDbId)).append("\n");
     sb.append("    imageFileName: ").append(toIndentedString(imageFileName)).append("\n");
     sb.append("    imageFileSize: ").append(toIndentedString(imageFileSize)).append("\n");
     sb.append("    imageHeight: ").append(toIndentedString(imageHeight)).append("\n");

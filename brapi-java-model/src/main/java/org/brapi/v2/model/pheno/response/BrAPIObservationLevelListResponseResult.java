@@ -15,7 +15,7 @@ import org.brapi.v2.model.pheno.BrAPIObservationUnitHierarchyLevel;
 /**
  * ObservationLevelListResponseResult
  */
-
+//done
 
 public class BrAPIObservationLevelListResponseResult implements BrAPIResponseResult<BrAPIObservationUnitHierarchyLevel>  {
   @JsonProperty("data")

@@ -16,7 +16,7 @@ import org.brapi.v2.model.pheno.BrAPIObservation;
  * ObservationListResponseResult
  */
 
-
+//done
 public class BrAPIObservationListResponseResult implements BrAPIResponseResult<BrAPIObservation>  {
   @JsonProperty("data")
   @Valid

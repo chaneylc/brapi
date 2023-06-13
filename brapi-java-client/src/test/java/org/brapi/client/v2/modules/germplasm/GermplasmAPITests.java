@@ -22,13 +22,10 @@ import com.github.filosganga.geogson.model.Point;
 import com.github.filosganga.geogson.model.positions.SinglePosition;
 
 import com.google.gson.JsonObject;
-import lombok.SneakyThrows;
 
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.BrAPIClientTest;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.germplasm.GermplasmQueryParams;
-import org.brapi.client.v2.model.queryParams.phenotype.ScaleQueryParams;
 import org.brapi.v2.model.BrApiGeoJSON;
 import org.brapi.v2.model.BrAPIExternalReference;
 import org.brapi.v2.model.germ.BrAPIBiologicalStatusOfAccessionCode;
@@ -38,8 +35,6 @@ import org.brapi.v2.model.germ.BrAPIGermplasmDonors;
 import org.brapi.v2.model.germ.BrAPIGermplasmSynonyms;
 import org.brapi.v2.model.germ.BrAPIGermplasmOrigin;
 import org.brapi.v2.model.germ.response.BrAPIGermplasmSingleResponse;
-import org.brapi.v2.model.pheno.BrAPIScale;
-import org.brapi.v2.model.pheno.response.BrAPIScaleListResponse;
 import org.brapi.v2.model.germ.BrAPIGermplasmStorageTypes;
 import org.brapi.v2.model.germ.BrAPIGermplasmStorageTypesEnum;
 import org.brapi.v2.model.germ.BrAPITaxonID;

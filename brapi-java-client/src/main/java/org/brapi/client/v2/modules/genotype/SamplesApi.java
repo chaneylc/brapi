@@ -20,8 +20,6 @@ import java.util.*;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.brapi.client.v2.ApiCallback;
-import org.brapi.client.v2.BrAPIClient;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.Configuration;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.genotype.SampleQueryParams;
@@ -30,7 +28,6 @@ import org.brapi.v2.model.geno.BrAPISample;
 import org.brapi.v2.model.geno.response.BrAPISampleListResponse;
 import org.brapi.v2.model.geno.request.BrAPISampleSearchRequest;
 import org.brapi.v2.model.geno.response.BrAPISampleSingleResponse;
-import org.brapi.v2.model.pheno.response.BrAPIObservationUnitListResponse;
 
 public class SamplesApi {
     private BrAPIClient apiClient;

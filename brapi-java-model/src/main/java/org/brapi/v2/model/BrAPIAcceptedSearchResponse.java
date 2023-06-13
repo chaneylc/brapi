@@ -13,7 +13,7 @@ import org.brapi.v2.model.BrAPIAcceptedSearchResponseResult;
  * Model202AcceptedSearchResponse
  */
 
-
+//done
 public class BrAPIAcceptedSearchResponse   {
   @JsonProperty("@context")
   private BrAPIContext _atContext = null;

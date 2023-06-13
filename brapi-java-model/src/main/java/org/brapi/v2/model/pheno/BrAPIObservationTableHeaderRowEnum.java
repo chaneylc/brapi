@@ -4,7 +4,7 @@ import org.brapi.v2.model.BrAPIEnum;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+//done
 public enum BrAPIObservationTableHeaderRowEnum implements BrAPIEnum{
     OBSERVATIONTIMESTAMP("observationTimeStamp"),
     OBSERVATIONUNITDBID("observationUnitDbId"),

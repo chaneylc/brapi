@@ -18,6 +18,13 @@ import org.brapi.v2.model.pheno.BrAPIObservationUnitLevelRelationship;
 
 
 public class BrAPIObservationSearchRequest extends BrAPISearchRequestParametersPaging  {
+
+  @JsonProperty("commonCropNames")
+  private List<String> commonCropNames = null;
+
+  @JsonProperty("externalReferenceIds")
+  private List<String> externalReferenceIds = null;
+
   @JsonProperty("programDbIds")
   @Valid
   private List<String> programDbIds = null;
@@ -96,6 +103,9 @@ public class BrAPIObservationSearchRequest extends BrAPISearchRequestParametersP
   @Valid
   private List<String> observationUnitDbIds = null;
 
+  @JsonProperty("observationVariablePUIs")
+  private List<String> observationVariablePUIs = null;
+
   @JsonProperty("seasonDbIds")
   @Valid
   private List<String> seasonDbIds = null;
@@ -125,6 +135,26 @@ public class BrAPIObservationSearchRequest extends BrAPISearchRequestParametersP
 
   public void setProgramDbIds(List<String> programDbIds) {
     this.programDbIds = programDbIds;
+  }
+
+  public BrAPIObservationSearchRequest commonCropNames(List<String> commonCropNames) {
+    this.commonCropNames = commonCropNames;
+    return this;
+  }
+
+  public BrAPIObservationSearchRequest addCommonCropNamesItem(String commonCropNamesItem) {
+    if (this.commonCropNames == null) {
+      this.commonCropNames = new ArrayList<String>();
+    }
+    this.commonCropNames.add(commonCropNamesItem);
+    return this;
+  }
+  public List<String> getCommonCropNames() {
+    return commonCropNames;
+  }
+
+  public void setCommonCropNames(List<String> commonCropNames) {
+    this.commonCropNames = commonCropNames;
   }
 
   public BrAPIObservationSearchRequest programNames(List<String> programNames) {
@@ -206,6 +236,32 @@ public class BrAPIObservationSearchRequest extends BrAPISearchRequestParametersP
 
   public void setTrialNames(List<String> trialNames) {
     this.trialNames = trialNames;
+  }
+
+  public BrAPIObservationSearchRequest externalReferenceIds(List<String> externalReferenceIds) {
+    this.externalReferenceIds = externalReferenceIds;
+    return this;
+  }
+
+  public BrAPIObservationSearchRequest addExternalReferenceIdsItem(String externalReferenceIdsItem) {
+    if (this.externalReferenceIds == null) {
+      this.externalReferenceIds = new ArrayList<String>();
+    }
+    this.externalReferenceIds.add(externalReferenceIdsItem);
+    return this;
+  }
+
+  /**
+   * List of external reference IDs. Could be a simple strings or a URIs. (use with &#x60;externalReferenceSources&#x60; parameter)
+   *
+   * @return externalReferenceIds
+   **/
+  public List<String> getExternalReferenceIds() {
+    return externalReferenceIds;
+  }
+
+  public void setExternalReferenceIds(List<String> externalReferenceIds) {
+    this.externalReferenceIds = externalReferenceIds;
   }
 
   public BrAPIObservationSearchRequest studyDbIds(List<String> studyDbIds) {
@@ -639,6 +695,32 @@ public class BrAPIObservationSearchRequest extends BrAPISearchRequestParametersP
     return this;
   }
 
+  public BrAPIObservationSearchRequest observationVariablePUIs(List<String> observationVariablePUIs) {
+    this.observationVariablePUIs = observationVariablePUIs;
+    return this;
+  }
+
+  public BrAPIObservationSearchRequest addObservationVariablePUIsItem(String observationVariablePUIsItem) {
+    if (this.observationVariablePUIs == null) {
+      this.observationVariablePUIs = new ArrayList<String>();
+    }
+    this.observationVariablePUIs.add(observationVariablePUIsItem);
+    return this;
+  }
+
+  /**
+   * The Permanent Unique Identifier of an Observation Variable, usually in the form of a URI
+   *
+   * @return observationVariablePUIs
+   **/
+  public List<String> getObservationVariablePUIs() {
+    return observationVariablePUIs;
+  }
+
+  public void setObservationVariablePUIs(List<String> observationVariablePUIs) {
+    this.observationVariablePUIs = observationVariablePUIs;
+  }
+
   /**
    * The year or Phenotyping campaign of a multi-annual study (trees, grape, ...)
    * @return seasonDbIds
@@ -655,7 +737,7 @@ public class BrAPIObservationSearchRequest extends BrAPISearchRequestParametersP
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -663,61 +745,71 @@ public class BrAPIObservationSearchRequest extends BrAPISearchRequestParametersP
       return false;
     }
     BrAPIObservationSearchRequest observationSearchRequest = (BrAPIObservationSearchRequest) o;
-    return Objects.equals(this.programDbIds, observationSearchRequest.programDbIds) &&
-        Objects.equals(this.programNames, observationSearchRequest.programNames) &&
-        Objects.equals(this.trialDbIds, observationSearchRequest.trialDbIds) &&
-        Objects.equals(this.trialNames, observationSearchRequest.trialNames) &&
-        Objects.equals(this.studyDbIds, observationSearchRequest.studyDbIds) &&
-        Objects.equals(this.studyNames, observationSearchRequest.studyNames) &&
-        Objects.equals(this.germplasmDbIds, observationSearchRequest.germplasmDbIds) &&
-        Objects.equals(this.germplasmNames, observationSearchRequest.germplasmNames) &&
-        Objects.equals(this.locationDbIds, observationSearchRequest.locationDbIds) &&
-        Objects.equals(this.locationNames, observationSearchRequest.locationNames) &&
-        Objects.equals(this.observationVariableDbIds, observationSearchRequest.observationVariableDbIds) &&
-        Objects.equals(this.observationVariableNames, observationSearchRequest.observationVariableNames) &&
-        Objects.equals(this.externalReferenceIDs, observationSearchRequest.externalReferenceIDs) &&
-        Objects.equals(this.externalReferenceSources, observationSearchRequest.externalReferenceSources) &&
-        Objects.equals(this.observationDbIds, observationSearchRequest.observationDbIds) &&
-        Objects.equals(this.observationLevelRelationships, observationSearchRequest.observationLevelRelationships) &&
-        Objects.equals(this.observationLevels, observationSearchRequest.observationLevels) &&
-        Objects.equals(this.observationTimeStampRangeEnd, observationSearchRequest.observationTimeStampRangeEnd) &&
-        Objects.equals(this.observationTimeStampRangeStart, observationSearchRequest.observationTimeStampRangeStart) &&
-        Objects.equals(this.observationUnitDbIds, observationSearchRequest.observationUnitDbIds) &&
-        Objects.equals(this.seasonDbIds, observationSearchRequest.seasonDbIds) &&
-        super.equals(o);
+    return Objects.equals(this.commonCropNames, observationSearchRequest.commonCropNames) &&
+            Objects.equals(this.externalReferenceIDs, observationSearchRequest.externalReferenceIDs) &&
+            Objects.equals(this.externalReferenceIds, observationSearchRequest.externalReferenceIds) &&
+            Objects.equals(this.externalReferenceSources, observationSearchRequest.externalReferenceSources) &&
+            Objects.equals(this.germplasmDbIds, observationSearchRequest.germplasmDbIds) &&
+            Objects.equals(this.germplasmNames, observationSearchRequest.germplasmNames) &&
+            Objects.equals(this.locationDbIds, observationSearchRequest.locationDbIds) &&
+            Objects.equals(this.locationNames, observationSearchRequest.locationNames) &&
+            Objects.equals(this.observationDbIds, observationSearchRequest.observationDbIds) &&
+            Objects.equals(this.observationLevelRelationships, observationSearchRequest.observationLevelRelationships) &&
+            Objects.equals(this.observationLevels, observationSearchRequest.observationLevels) &&
+            Objects.equals(this.observationTimeStampRangeEnd, observationSearchRequest.observationTimeStampRangeEnd) &&
+            Objects.equals(this.observationTimeStampRangeStart, observationSearchRequest.observationTimeStampRangeStart) &&
+            Objects.equals(this.observationUnitDbIds, observationSearchRequest.observationUnitDbIds) &&
+            Objects.equals(this.observationVariableDbIds, observationSearchRequest.observationVariableDbIds) &&
+            Objects.equals(this.observationVariableNames, observationSearchRequest.observationVariableNames) &&
+            Objects.equals(this.observationVariablePUIs, observationSearchRequest.observationVariablePUIs) &&
+            Objects.equals(this.page, observationSearchRequest.page) &&
+            Objects.equals(this.pageSize, observationSearchRequest.pageSize) &&
+            Objects.equals(this.programDbIds, observationSearchRequest.programDbIds) &&
+            Objects.equals(this.programNames, observationSearchRequest.programNames) &&
+            Objects.equals(this.seasonDbIds, observationSearchRequest.seasonDbIds) &&
+            Objects.equals(this.studyDbIds, observationSearchRequest.studyDbIds) &&
+            Objects.equals(this.studyNames, observationSearchRequest.studyNames) &&
+            Objects.equals(this.trialDbIds, observationSearchRequest.trialDbIds) &&
+            Objects.equals(this.trialNames, observationSearchRequest.trialNames);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(programDbIds, programNames, trialDbIds, trialNames, studyDbIds, studyNames, germplasmDbIds, germplasmNames, locationDbIds, locationNames, observationVariableDbIds, observationVariableNames, externalReferenceIDs, externalReferenceSources, observationDbIds, observationLevelRelationships, observationLevels, observationTimeStampRangeEnd, observationTimeStampRangeStart, observationUnitDbIds, seasonDbIds, super.hashCode());
+    return Objects.hash(commonCropNames, externalReferenceIDs, externalReferenceIds, externalReferenceSources, germplasmDbIds, germplasmNames, locationDbIds, locationNames, observationDbIds, observationLevelRelationships, observationLevels, observationTimeStampRangeEnd, observationTimeStampRangeStart, observationUnitDbIds, observationVariableDbIds, observationVariableNames, observationVariablePUIs, page, pageSize, programDbIds, programNames, seasonDbIds, studyDbIds, studyNames, trialDbIds, trialNames);
   }
+
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ObservationSearchRequest {\n");
-    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
-    sb.append("    programDbIds: ").append(toIndentedString(programDbIds)).append("\n");
-    sb.append("    programNames: ").append(toIndentedString(programNames)).append("\n");
-    sb.append("    trialDbIds: ").append(toIndentedString(trialDbIds)).append("\n");
-    sb.append("    trialNames: ").append(toIndentedString(trialNames)).append("\n");
-    sb.append("    studyDbIds: ").append(toIndentedString(studyDbIds)).append("\n");
-    sb.append("    studyNames: ").append(toIndentedString(studyNames)).append("\n");
+
+    sb.append("    commonCropNames: ").append(toIndentedString(commonCropNames)).append("\n");
+    sb.append("    externalReferenceIDs: ").append(toIndentedString(externalReferenceIDs)).append("\n");
+    sb.append("    externalReferenceIds: ").append(toIndentedString(externalReferenceIds)).append("\n");
+    sb.append("    externalReferenceSources: ").append(toIndentedString(externalReferenceSources)).append("\n");
     sb.append("    germplasmDbIds: ").append(toIndentedString(germplasmDbIds)).append("\n");
     sb.append("    germplasmNames: ").append(toIndentedString(germplasmNames)).append("\n");
     sb.append("    locationDbIds: ").append(toIndentedString(locationDbIds)).append("\n");
     sb.append("    locationNames: ").append(toIndentedString(locationNames)).append("\n");
-    sb.append("    observationVariableDbIds: ").append(toIndentedString(observationVariableDbIds)).append("\n");
-    sb.append("    observationVariableNames: ").append(toIndentedString(observationVariableNames)).append("\n");
-    sb.append("    externalReferenceIDs: ").append(toIndentedString(externalReferenceIDs)).append("\n");
-    sb.append("    externalReferenceSources: ").append(toIndentedString(externalReferenceSources)).append("\n");
     sb.append("    observationDbIds: ").append(toIndentedString(observationDbIds)).append("\n");
     sb.append("    observationLevelRelationships: ").append(toIndentedString(observationLevelRelationships)).append("\n");
     sb.append("    observationLevels: ").append(toIndentedString(observationLevels)).append("\n");
     sb.append("    observationTimeStampRangeEnd: ").append(toIndentedString(observationTimeStampRangeEnd)).append("\n");
     sb.append("    observationTimeStampRangeStart: ").append(toIndentedString(observationTimeStampRangeStart)).append("\n");
     sb.append("    observationUnitDbIds: ").append(toIndentedString(observationUnitDbIds)).append("\n");
+    sb.append("    observationVariableDbIds: ").append(toIndentedString(observationVariableDbIds)).append("\n");
+    sb.append("    observationVariableNames: ").append(toIndentedString(observationVariableNames)).append("\n");
+    sb.append("    observationVariablePUIs: ").append(toIndentedString(observationVariablePUIs)).append("\n");
+    sb.append("    page: ").append(toIndentedString(page)).append("\n");
+    sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
+    sb.append("    programDbIds: ").append(toIndentedString(programDbIds)).append("\n");
+    sb.append("    programNames: ").append(toIndentedString(programNames)).append("\n");
     sb.append("    seasonDbIds: ").append(toIndentedString(seasonDbIds)).append("\n");
+    sb.append("    studyDbIds: ").append(toIndentedString(studyDbIds)).append("\n");
+    sb.append("    studyNames: ").append(toIndentedString(studyNames)).append("\n");
+    sb.append("    trialDbIds: ").append(toIndentedString(trialDbIds)).append("\n");
+    sb.append("    trialNames: ").append(toIndentedString(trialNames)).append("\n");
     sb.append("}");
     return sb.toString();
   }

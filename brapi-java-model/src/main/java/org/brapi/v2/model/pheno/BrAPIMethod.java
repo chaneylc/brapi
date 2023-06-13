@@ -1,5 +1,6 @@
 package org.brapi.v2.model.pheno;
 
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

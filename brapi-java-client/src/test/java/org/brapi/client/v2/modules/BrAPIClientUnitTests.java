@@ -25,7 +25,6 @@ import okhttp3.Request;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 
-import org.brapi.client.v2.BrAPIClient;
 import org.brapi.client.v2.model.exceptions.*;
 import org.brapi.v2.model.core.response.BrAPIProgramListResponse;
 import org.junit.jupiter.api.*;

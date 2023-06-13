@@ -20,8 +20,6 @@ package org.brapi.client.v2.modules.phenotype;
 import lombok.SneakyThrows;
 import okhttp3.Call;
 
-import org.brapi.client.v2.BrAPIClient;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.phenotype.VariableQueryParams;
 import org.brapi.v2.model.pheno.BrAPIObservationVariable;
@@ -31,9 +29,7 @@ import org.brapi.v2.model.pheno.response.BrAPIScaleListResponse;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 
 import java.lang.reflect.Type;
 import java.util.Arrays;

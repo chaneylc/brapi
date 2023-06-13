@@ -20,8 +20,6 @@ package org.brapi.client.v2.modules.core;
 import lombok.SneakyThrows;
 import okhttp3.Call;
 
-import org.brapi.client.v2.BrAPIClient;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.core.LocationQueryParams;
 import org.brapi.v2.model.core.BrAPILocation;
@@ -30,9 +28,8 @@ import org.brapi.v2.model.core.response.BrAPILocationSingleResponse;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
+
 import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.HashMap;

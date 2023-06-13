@@ -16,7 +16,7 @@ import org.brapi.v2.model.pheno.BrAPIMethod;
  * MethodListResponseResult
  */
 
-
+//done
 public class BrAPIMethodListResponseResult implements BrAPIResponseResult<BrAPIMethod>  {
   @JsonProperty("data")
   @Valid

@@ -14,7 +14,7 @@ import org.brapi.v2.model.BrAPIMetadata;
  * ObservationLevelListResponse
  */
 
-
+//done
 public class BrAPIObservationLevelListResponse implements BrAPIResponse<BrAPIObservationLevelListResponseResult>  {
   @JsonProperty("@context")
   private BrAPIContext _atContext = null;

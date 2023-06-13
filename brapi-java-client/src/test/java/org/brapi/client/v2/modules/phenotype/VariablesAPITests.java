@@ -17,11 +17,8 @@
 
 package org.brapi.client.v2.modules.phenotype;
 
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import lombok.SneakyThrows;
 
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.BrAPIClientTest;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.phenotype.VariableQueryParams;

@@ -12,6 +12,7 @@
 
 package org.brapi.model.v21.germplasm;
 
+
 import com.google.gson.annotations.SerializedName;
 import io.swagger.v3.oas.annotations.media.Schema;
 
@@ -20,8 +21,6 @@ import java.util.*;
 /**
  * A description of the way an Observation should be collected.  &lt;br&gt;For example, an ObservationVariable might be defined with a Trait of \&quot;plant height\&quot;, a Scale of \&quot;meters\&quot;, and a Method of \&quot;tape measure\&quot;. This variable would be distinct from a variable with the Method \&quot;estimation\&quot; or \&quot;drone image processing\&quot;.
  */
-@Schema(description = "A description of the way an Observation should be collected.  <br>For example, an ObservationVariable might be defined with a Trait of \"plant height\", a Scale of \"meters\", and a Method of \"tape measure\". This variable would be distinct from a variable with the Method \"estimation\" or \"drone image processing\". ")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-10-25T17:45:22.672Z[GMT]")
 public class Method {
     @SerializedName("additionalInfo")
     private Map<String, String> additionalInfo = null;

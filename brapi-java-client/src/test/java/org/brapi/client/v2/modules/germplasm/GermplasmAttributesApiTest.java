@@ -13,7 +13,6 @@
 package org.brapi.client.v2.modules.germplasm;
 
 import org.apache.commons.lang3.tuple.Pair;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.germplasm.GermplasmAttributeQueryParams;
 import org.brapi.v2.model.BrAPIAcceptedSearchResponse;
@@ -22,7 +21,6 @@ import org.brapi.v2.model.germ.response.BrAPIGermplasmAttributeCategoryListRespo
 import org.brapi.v2.model.germ.response.BrAPIGermplasmAttributeListResponse;
 import org.brapi.v2.model.germ.request.BrAPIGermplasmAttributeSearchRequest;
 import org.brapi.v2.model.germ.response.BrAPIGermplasmAttributeSingleResponse;
-import org.brapi.v2.model.pheno.response.BrAPIObservationUnitListResponse;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;

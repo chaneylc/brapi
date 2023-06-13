@@ -19,7 +19,6 @@ package org.brapi.client.v2.modules.core;
 
 import lombok.SneakyThrows;
 
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.BrAPIClientTest;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.core.ProgramQueryParams;

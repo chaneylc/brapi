@@ -20,8 +20,6 @@ import java.util.Optional;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.brapi.client.v2.ApiCallback;
-import org.brapi.client.v2.BrAPIClient;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.Configuration;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.phenotype.ObservationUnitQueryParams;

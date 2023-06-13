@@ -23,8 +23,6 @@ import java.util.Optional;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.brapi.client.v2.ApiCallback;
-import org.brapi.client.v2.BrAPIClient;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.Configuration;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.core.TrialQueryParams;
@@ -33,7 +31,6 @@ import org.brapi.v2.model.core.BrAPITrial;
 import org.brapi.v2.model.core.response.BrAPITrialListResponse;
 import org.brapi.v2.model.core.request.BrAPITrialSearchRequest;
 import org.brapi.v2.model.core.response.BrAPITrialSingleResponse;
-import org.brapi.v2.model.pheno.response.BrAPIObservationUnitListResponse;
 
 public class TrialsApi {
     private BrAPIClient apiClient;

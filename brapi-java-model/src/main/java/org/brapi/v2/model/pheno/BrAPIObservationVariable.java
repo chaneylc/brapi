@@ -18,7 +18,7 @@ import javax.validation.Valid;
 /**
  * ObservationVariable
  */
-
+//done
 
 public class BrAPIObservationVariable {
   @JsonProperty("observationVariableDbId")

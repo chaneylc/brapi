@@ -22,7 +22,6 @@ import java.util.Objects;
  * EventsResponse
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2022-10-25T17:44:48.481Z[GMT]")
 public class EventsResponse {
     @SerializedName("@context")
     private Context _atContext = null;

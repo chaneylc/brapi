@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * ScaleBaseClassValidValuesCategories
  */
 
-
+//done
 public class BrAPIScaleValidValuesCategories {
   @JsonProperty("label")
   private String label = null;

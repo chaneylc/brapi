@@ -1,9 +1,9 @@
 /*
- * BrAPI-Core
- * The Breeding API (BrAPI) is a Standardized REST ful Web Service API Specification for communicating Plant Breeding Data. BrAPI allows for easy data sharing between databases and tools involved in plant breeding. <div class=\"brapi-section\"> <h2 class=\"brapi-section-title\">General Reference Documentation</h2> <div class=\"gen-info-link\"><a href=\"https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/URL_Structure.md\">URL Structure</a></div> <div class=\"gen-info-link\"><a href=\"https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Response_Structure.md\">Response Structure</a></div> <div class=\"gen-info-link\"><a href=\"https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Date_Time_Encoding.md\">Date/Time Encoding</a></div> <div class=\"gen-info-link\"><a href=\"https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Location_Encoding.md\">Location Encoding</a></div> <div class=\"gen-info-link\"><a href=\"https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Error_Handling.md\">Error Handling</a></div> <div class=\"gen-info-link\"><a href=\"https://github.com/plantbreeding/API/blob/master/Specification/GeneralInfo/Search_Services.md\">Search Services</a></div> </div>  <div class=\"current-brapi-section brapi-section\"> <h2 class=\"brapi-section-title\">BrAPI Core</h2> <div class=\"brapi-section-description\">The BrAPI Core module contains high level entities used for organization and management. This includes Programs, Trials, Studies, Locations, People, and Lists</div> <div class=\"version-number\">V2.0</div> <div class=\"link-btn\"><a href=\"https://github.com/plantbreeding/API/tree/master/Specification/BrAPI-Core\">GitHub</a></div> <div class=\"link-btn\"><a href=\"https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core\">SwaggerHub</a></div> <div class=\"link-btn\"><a href=\"https://brapicore.docs.apiary.io\">Apiary</a></div> <div class=\"stop-float\"></div> </div>  <div class=\"brapi-section\"> <h2 class=\"brapi-section-title\">BrAPI Phenotyping</h2> <div class=\"brapi-section-description\">The BrAPI Phenotyping module contains entities related to phenotypic observations. This includes Observation Units, Observations, Observation Variables, Traits, Scales, Methods, and Images</div> <div class=\"version-number\">V2.0</div> <div class=\"link-btn\"><a href=\"https://github.com/plantbreeding/API/tree/master/Specification/BrAPI-Phenotyping\">GitHub</a></div> <div class=\"link-btn\"><a href=\"https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Phenotyping\">SwaggerHub</a></div> <div class=\"link-btn\"><a href=\"https://brapiphenotyping.docs.apiary.io\">Apiary</a></div> <div class=\"stop-float\"></div> </div>  <div class=\"brapi-section\"> <h2 class=\"brapi-section-title\">BrAPI Genotyping</h2> <div class=\"brapi-section-description\">The BrAPI Genotyping module contains entities related to genotyping analysis. This includes Samples, Markers, Variant Sets, Variants, Call Sets, Calls, References, Reads, and Vendor Orders</div> <div class=\"version-number\">V2.0</div> <div class=\"link-btn\"><a href=\"https://github.com/plantbreeding/API/tree/master/Specification/BrAPI-Genotyping\">GitHub</a></div> <div class=\"link-btn\"><a href=\"https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Genotyping\">SwaggerHub</a></div> <div class=\"link-btn\"><a href=\"https://brapigenotyping.docs.apiary.io\">Apiary</a></div> <div class=\"stop-float\"></div> </div>  <div class=\"brapi-section\"> <h2 class=\"brapi-section-title\">BrAPI Germplasm</h2> <div class=\"brapi-section-description\">The BrAPI Germplasm module contains entities related to germplasm management. This includes Germplasm, Germplasm Attributes, Seed Lots, Crosses, Pedigree, and Progeny</div> <div class=\"version-number\">V2.0</div> <div class=\"link-btn\"><a href=\"https://github.com/plantbreeding/API/tree/master/Specification/BrAPI-Germplasm\">GitHub</a></div> <div class=\"link-btn\"><a href=\"https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Germplasm\">SwaggerHub</a></div> <div class=\"link-btn\"><a href=\"https://brapigermplasm.docs.apiary.io\">Apiary</a></div> <div class=\"stop-float\"></div> </div>  <style> .link-btn{ float: left;  margin: 2px 10px 0 0;  padding: 0 5px;  border-radius: 5px;  background-color: #ddd; } .stop-float{   clear: both; } .version-number{   float: left;    margin: 5px 10px 0 5px; } .brapi-section-title{   margin: 0 10px 0 0;   font-size: 20px; } .current-brapi-section{   font-weight: bolder;   border-radius: 5px;    background-color: #ddd; } .brapi-section{   padding: 5px 5px;  } .brapi-section-description{   margin: 5px 0 0 5px; } </style>
+ * BrAPI-Phenotyping
+ * The Breeding API (BrAPI) is a Standardized REST ful Web Service API Specification for communicating Plant Breeding Data. BrAPI allows for easy data sharing between databases and tools involved in plant breeding. <div class=\"brapi-section\"> <h2 class=\"brapi-section-title\">General Reference Documentation</h2> <div class=\"gen-info-link\"><a href=\"https://wiki.brapi.org/index.php/RESTfulness\">URL Structure</a></div> <div class=\"gen-info-link\"><a href=\"https://wiki.brapi.org/index.php/Response_Structure\">Response Structure</a></div> <div class=\"gen-info-link\"><a href=\"https://wiki.brapi.org/index.php/Dates_and_Times\">Date/Time Encoding</a></div> <div class=\"gen-info-link\"><a href=\"https://wiki.brapi.org/index.php/Location_Coordinates\">Location Encoding</a></div> <div class=\"gen-info-link\"><a href=\"https://wiki.brapi.org/index.php/Error_Handling\">Error Handling</a></div> <div class=\"gen-info-link\"><a href=\"https://wiki.brapi.org/index.php/Search_Services\">Search Services</a></div> </div>  <div class=\"brapi-section\"> <h2 class=\"brapi-section-title\">BrAPI Core</h2> <div class=\"brapi-section-description\">The BrAPI Core module contains high level entities used for organization and management. This includes Programs, Trials, Studies, Locations, People, and Lists</div> <div class=\"version-number\">V2.1</div> <div class=\"link-btn\"><a href=\"https://github.com/plantbreeding/API/tree/brapi-V2.1/Specification/BrAPI-Core\">GitHub</a></div> <div class=\"link-btn\"><a href=\"https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Core/2.1\">SwaggerHub</a></div> <div class=\"link-btn\"><a href=\"https://brapicore21.docs.apiary.io\">Apiary</a></div> <div class=\"stop-float\"></div> </div>  <div class=\"current-brapi-section brapi-section\"> <h2 class=\"brapi-section-title\">BrAPI Phenotyping</h2> <div class=\"brapi-section-description\">The BrAPI Phenotyping module contains entities related to phenotypic observations. This includes Observation Units, Observations, Observation Variables, Traits, Scales, Methods, and Images</div> <div class=\"version-number\">V2.1</div> <div class=\"link-btn\"><a href=\"https://github.com/plantbreeding/API/tree/brapi-V2.1/Specification/BrAPI-Phenotyping\">GitHub</a></div> <div class=\"link-btn\"><a href=\"https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Phenotyping/2.1\">SwaggerHub</a></div> <div class=\"link-btn\"><a href=\"https://brapiphenotyping21.docs.apiary.io\">Apiary</a></div> <div class=\"stop-float\"></div> </div>  <div class=\"brapi-section\"> <h2 class=\"brapi-section-title\">BrAPI Genotyping</h2> <div class=\"brapi-section-description\">The BrAPI Genotyping module contains entities related to genotyping analysis. This includes Samples, Markers, Variant Sets, Variants, Call Sets, Calls, References, Reads, and Vendor Orders</div> <div class=\"version-number\">V2.1</div> <div class=\"link-btn\"><a href=\"https://github.com/plantbreeding/API/tree/brapi-V2.1/Specification/BrAPI-Genotyping\">GitHub</a></div> <div class=\"link-btn\"><a href=\"https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Genotyping/2.1\">SwaggerHub</a></div> <div class=\"link-btn\"><a href=\"https://brapigenotyping21.docs.apiary.io\">Apiary</a></div> <div class=\"stop-float\"></div> </div>  <div class=\"brapi-section\"> <h2 class=\"brapi-section-title\">BrAPI Germplasm</h2> <div class=\"brapi-section-description\">The BrAPI Germplasm module contains entities related to germplasm management. This includes Germplasm, Germplasm Attributes, Seed Lots, Crosses, Pedigree, and Progeny</div> <div class=\"version-number\">V2.1</div> <div class=\"link-btn\"><a href=\"https://github.com/plantbreeding/API/tree/brapi-V2.1/Specification/BrAPI-Germplasm\">GitHub</a></div> <div class=\"link-btn\"><a href=\"https://app.swaggerhub.com/apis/PlantBreedingAPI/BrAPI-Germplasm/2.1\">SwaggerHub</a></div> <div class=\"link-btn\"><a href=\"https://brapigermplasm21.docs.apiary.io\">Apiary</a></div> <div class=\"stop-float\"></div> </div>  <style> .link-btn{ float: left;  margin: 2px 10px 0 0;  padding: 0 5px;  border-radius: 5px;  background-color: #ddd; } .stop-float{   clear: both; } .version-number{   float: left;    margin: 5px 10px 0 5px; } .brapi-section-title{   margin: 0 10px 0 0;   font-size: 20px; } .current-brapi-section{   font-weight: bolder;   border-radius: 5px;    background-color: #ddd; } .brapi-section{   padding: 5px 5px;  } .brapi-section-description{   margin: 5px 0 0 5px; } </style>
  *
- * OpenAPI spec version: 2.0
- * 
+ * OpenAPI spec version: 2.1
+ *
  *
  * NOTE: This class is auto generated by the swagger code generator program.
  * https://github.com/swagger-api/swagger-codegen.git
@@ -12,28 +12,24 @@
 
 package org.brapi.client.v2;
 
-import com.github.filosganga.geogson.gson.GeometryAdapterFactory;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonParseException;
+import com.google.gson.*;
+import com.google.gson.internal.bind.util.ISO8601Utils;
 import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonToken;
+import com.google.gson.stream.JsonWriter;
+import io.gsonfire.GsonFireBuilder;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.OffsetDateTime;
+import org.threeten.bp.format.DateTimeFormatter;
 
-import java.time.LocalDate;
-import java.time.OffsetDateTime;
-import java.time.format.DateTimeFormatter;
-
+import java.io.IOException;
 import java.io.StringReader;
 import java.lang.reflect.Type;
 import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.ParsePosition;
 import java.util.Date;
-
-import org.brapi.client.v2.typeAdapters.BrApiEnumTypeAdapterFactory;
-import org.brapi.client.v2.typeAdapters.DateTypeAdapter;
-import org.brapi.client.v2.typeAdapters.LocalDateTypeAdapter;
-import org.brapi.client.v2.typeAdapters.OffsetDateTimeTypeAdapter;
-import org.brapi.client.v2.typeAdapters.PaginationTypeAdapter;
-import org.brapi.client.v2.typeAdapters.SqlDateTypeAdapter;
-import org.brapi.v2.model.BrAPIPagination;
+import java.util.Map;
 
 public class JSON {
     private Gson gson;
@@ -43,17 +39,34 @@ public class JSON {
     private final OffsetDateTimeTypeAdapter offsetDateTimeTypeAdapter = new OffsetDateTimeTypeAdapter();
     private final LocalDateTypeAdapter localDateTypeAdapter = new LocalDateTypeAdapter();
 
+    public static GsonBuilder createGson() {
+        GsonFireBuilder fireBuilder = new GsonFireBuilder();
+        return fireBuilder.createGsonBuilder();
+    }
+
+    private static String getDiscriminatorValue(JsonElement readElement, String discriminatorField) {
+        JsonElement element = readElement.getAsJsonObject().get(discriminatorField);
+        if (null == element) {
+            throw new IllegalArgumentException("missing discriminator field: <" + discriminatorField + ">");
+        }
+        return element.getAsString();
+    }
+
+    private static <T> Class<? extends T> getClassByDiscriminator(Map<String, Class<? extends T>> classByDiscriminatorValue, String discriminatorValue) {
+        Class<? extends T> clazz = classByDiscriminatorValue.get(discriminatorValue.toUpperCase());
+        if (null == clazz) {
+            throw new IllegalArgumentException("cannot determine model class of name: <" + discriminatorValue + ">");
+        }
+        return clazz;
+    }
+
     public JSON() {
-        gson = new GsonBuilder()
-            .registerTypeAdapter(Date.class, dateTypeAdapter)
-            .registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter)
-            .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
-            .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
-            .registerTypeAdapter(BrAPIPagination.class, new PaginationTypeAdapter())
-//            .registerTypeAdapter(GeoJSONGeometry.class, new GeoJSONGeometryTypeAdapter())
-            .registerTypeAdapterFactory(new BrApiEnumTypeAdapterFactory())
-            .registerTypeAdapterFactory(new GeometryAdapterFactory())
-            .create();
+        gson = createGson()
+                .registerTypeAdapter(Date.class, dateTypeAdapter)
+                .registerTypeAdapter(java.sql.Date.class, sqlDateTypeAdapter)
+                .registerTypeAdapter(OffsetDateTime.class, offsetDateTimeTypeAdapter)
+                .registerTypeAdapter(LocalDate.class, localDateTypeAdapter)
+                .create();
     }
 
     /**
@@ -119,6 +132,206 @@ public class JSON {
         }
     }
 
+    /**
+     * Gson TypeAdapter for JSR310 OffsetDateTime type
+     */
+    public static class OffsetDateTimeTypeAdapter extends TypeAdapter<OffsetDateTime> {
+
+        private DateTimeFormatter formatter;
+
+        public OffsetDateTimeTypeAdapter() {
+            this(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
+        }
+
+        public OffsetDateTimeTypeAdapter(DateTimeFormatter formatter) {
+            this.formatter = formatter;
+        }
+
+        public void setFormat(DateTimeFormatter dateFormat) {
+            this.formatter = dateFormat;
+        }
+
+        @Override
+        public void write(JsonWriter out, OffsetDateTime date) throws IOException {
+            if (date == null) {
+                out.nullValue();
+            } else {
+                out.value(formatter.format(date));
+            }
+        }
+
+        @Override
+        public OffsetDateTime read(JsonReader in) throws IOException {
+            if (in.peek() == JsonToken.NULL) {
+                in.nextNull();
+                return null;
+            }
+            String date = in.nextString();
+            if (date.endsWith("+0000")) {
+                date = date.substring(0, date.length() - 5) + "Z";
+            }
+            return OffsetDateTime.parse(date, formatter);
+        }
+    }
+
+    /**
+     * Gson TypeAdapter for JSR310 LocalDate type
+     */
+    public class LocalDateTypeAdapter extends TypeAdapter<LocalDate> {
+
+        private DateTimeFormatter formatter;
+
+        public LocalDateTypeAdapter() {
+            this(DateTimeFormatter.ISO_LOCAL_DATE);
+        }
+
+        public LocalDateTypeAdapter(DateTimeFormatter formatter) {
+            this.formatter = formatter;
+        }
+
+        public void setFormat(DateTimeFormatter dateFormat) {
+            this.formatter = dateFormat;
+        }
+
+        @Override
+        public void write(JsonWriter out, LocalDate date) throws IOException {
+            if (date == null) {
+                out.nullValue();
+            } else {
+                out.value(formatter.format(date));
+            }
+        }
+
+        @Override
+        public LocalDate read(JsonReader in) throws IOException {
+            if (in.peek() == JsonToken.NULL) {
+                in.nextNull();
+                return null;
+            }
+            String date = in.nextString();
+            return LocalDate.parse(date, formatter);
+        }
+    }
+
+    public JSON setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
+        offsetDateTimeTypeAdapter.setFormat(dateFormat);
+        return this;
+    }
+
+    public JSON setLocalDateFormat(DateTimeFormatter dateFormat) {
+        localDateTypeAdapter.setFormat(dateFormat);
+        return this;
+    }
+
+    /**
+     * Gson TypeAdapter for java.sql.Date type
+     * If the dateFormat is null, a simple "yyyy-MM-dd" format will be used
+     * (more efficient than SimpleDateFormat).
+     */
+    public static class SqlDateTypeAdapter extends TypeAdapter<java.sql.Date> {
+
+        private DateFormat dateFormat;
+
+        public SqlDateTypeAdapter() {
+        }
+
+        public SqlDateTypeAdapter(DateFormat dateFormat) {
+            this.dateFormat = dateFormat;
+        }
+
+        public void setFormat(DateFormat dateFormat) {
+            this.dateFormat = dateFormat;
+        }
+
+        @Override
+        public void write(JsonWriter out, java.sql.Date date) throws IOException {
+            if (date == null) {
+                out.nullValue();
+            } else {
+                String value;
+                if (dateFormat != null) {
+                    value = dateFormat.format(date);
+                } else {
+                    value = date.toString();
+                }
+                out.value(value);
+            }
+        }
+
+        @Override
+        public java.sql.Date read(JsonReader in) throws IOException {
+            if (in.peek() == JsonToken.NULL) {
+                in.nextNull();
+                return null;
+            }
+            String date = in.nextString();
+            try {
+                if (dateFormat != null) {
+                    return new java.sql.Date(dateFormat.parse(date).getTime());
+                }
+                return new java.sql.Date(ISO8601Utils.parse(date, new ParsePosition(0)).getTime());
+            } catch (ParseException e) {
+                throw new JsonParseException(e);
+            }
+        }
+    }
+
+    /**
+     * Gson TypeAdapter for java.util.Date type
+     * If the dateFormat is null, ISO8601Utils will be used.
+     */
+    public static class DateTypeAdapter extends TypeAdapter<Date> {
+
+        private DateFormat dateFormat;
+
+        public DateTypeAdapter() {
+        }
+
+        public DateTypeAdapter(DateFormat dateFormat) {
+            this.dateFormat = dateFormat;
+        }
+
+        public void setFormat(DateFormat dateFormat) {
+            this.dateFormat = dateFormat;
+        }
+
+        @Override
+        public void write(JsonWriter out, Date date) throws IOException {
+            if (date == null) {
+                out.nullValue();
+            } else {
+                String value;
+                if (dateFormat != null) {
+                    value = dateFormat.format(date);
+                } else {
+                    value = ISO8601Utils.format(date, true);
+                }
+                out.value(value);
+            }
+        }
+
+        @Override
+        public Date read(JsonReader in) throws IOException {
+            try {
+                if (in.peek() == JsonToken.NULL) {
+                    in.nextNull();
+                    return null;
+                }
+                String date = in.nextString();
+                try {
+                    if (dateFormat != null) {
+                        return dateFormat.parse(date);
+                    }
+                    return ISO8601Utils.parse(date, new ParsePosition(0));
+                } catch (ParseException e) {
+                    throw new JsonParseException(e);
+                }
+            } catch (IllegalArgumentException e) {
+                throw new JsonParseException(e);
+            }
+        }
+    }
+
     public JSON setDateFormat(DateFormat dateFormat) {
         dateTypeAdapter.setFormat(dateFormat);
         return this;
@@ -128,15 +341,5 @@ public class JSON {
         sqlDateTypeAdapter.setFormat(dateFormat);
         return this;
     }
-
-	public JSON setOffsetDateTimeFormat(DateTimeFormatter dateFormat) {
-        offsetDateTimeTypeAdapter.setFormat(dateFormat);
-        return this;
-	}
-
-	public JSON setLocalDateFormat(DateTimeFormatter dateFormat) {
-        localDateTypeAdapter.setFormat(dateFormat);
-        return this;
-	}
 
 }

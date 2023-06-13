@@ -11,6 +11,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.annotations.JsonAdapter;
 import org.brapi.v2.model.BrAPIExternalReference;
+import org.brapi.v2.model.BrApiGeoJSON;
 import org.brapi.v2.model.NullableJsonElementTypeAdapterFactory;
 import org.brapi.v2.model.core.BrAPISeason;
 
@@ -38,6 +39,9 @@ public class BrAPIObservation  {
 
   @JsonProperty("externalReferences")
   private List<BrAPIExternalReference> externalReferences = null;
+
+  @JsonProperty("geoCoordinates")
+  private BrApiGeoJSON geoCoordinates = null;
 
   @JsonProperty("germplasmDbId")
   private String germplasmDbId = null;
@@ -145,12 +149,6 @@ public class BrAPIObservation  {
     return this;
   }
 
-  /**
-   * Get externalReferences
-   * @return externalReferences
-   **/
-
-
   @Valid
   public List<BrAPIExternalReference> getExternalReferences() {
     return externalReferences;
@@ -158,6 +156,19 @@ public class BrAPIObservation  {
 
   public void setExternalReferences(List<BrAPIExternalReference> externalReferences) {
     this.externalReferences = externalReferences;
+  }
+
+  public BrAPIObservation geoCoordinates(BrApiGeoJSON geoCoordinates) {
+    this.geoCoordinates = geoCoordinates;
+    return this;
+  }
+
+  public BrApiGeoJSON getGeoCoordinates() {
+    return geoCoordinates;
+  }
+
+  public void setGeoCoordinates(BrApiGeoJSON geoCoordinates) {
+    this.geoCoordinates = geoCoordinates;
   }
 
   public BrAPIObservation germplasmDbId(String germplasmDbId) {
@@ -373,7 +384,7 @@ public class BrAPIObservation  {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -381,12 +392,13 @@ public class BrAPIObservation  {
       return false;
     }
     BrAPIObservation observation = (BrAPIObservation) o;
-    return Objects.equals(this.observationDbId, observation.observationDbId) &&
-            Objects.equals(this.additionalInfo, observation.additionalInfo) &&
+    return Objects.equals(this.additionalInfo, observation.additionalInfo) &&
             Objects.equals(this.collector, observation.collector) &&
             Objects.equals(this.externalReferences, observation.externalReferences) &&
+            Objects.equals(this.geoCoordinates, observation.geoCoordinates) &&
             Objects.equals(this.germplasmDbId, observation.germplasmDbId) &&
             Objects.equals(this.germplasmName, observation.germplasmName) &&
+            Objects.equals(this.observationDbId, observation.observationDbId) &&
             Objects.equals(this.observationTimeStamp, observation.observationTimeStamp) &&
             Objects.equals(this.observationUnitDbId, observation.observationUnitDbId) &&
             Objects.equals(this.observationUnitName, observation.observationUnitName) &&
@@ -400,19 +412,22 @@ public class BrAPIObservation  {
 
   @Override
   public int hashCode() {
-    return Objects.hash(observationDbId, additionalInfo, collector, externalReferences, germplasmDbId, germplasmName, observationTimeStamp, observationUnitDbId, observationUnitName, observationVariableDbId, observationVariableName, season, studyDbId, uploadedBy, value);
+    return Objects.hash(additionalInfo, collector, externalReferences, geoCoordinates, germplasmDbId, germplasmName, observationDbId, observationTimeStamp, observationUnitDbId, observationUnitName, observationVariableDbId, observationVariableName, season, studyDbId, uploadedBy, value);
   }
+
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Observation {\n");
-    sb.append("    observationDbId: ").append(toIndentedString(observationDbId)).append("\n");
+
     sb.append("    additionalInfo: ").append(toIndentedString(additionalInfo)).append("\n");
     sb.append("    collector: ").append(toIndentedString(collector)).append("\n");
     sb.append("    externalReferences: ").append(toIndentedString(externalReferences)).append("\n");
+    sb.append("    geoCoordinates: ").append(toIndentedString(geoCoordinates)).append("\n");
     sb.append("    germplasmDbId: ").append(toIndentedString(germplasmDbId)).append("\n");
     sb.append("    germplasmName: ").append(toIndentedString(germplasmName)).append("\n");
+    sb.append("    observationDbId: ").append(toIndentedString(observationDbId)).append("\n");
     sb.append("    observationTimeStamp: ").append(toIndentedString(observationTimeStamp)).append("\n");
     sb.append("    observationUnitDbId: ").append(toIndentedString(observationUnitDbId)).append("\n");
     sb.append("    observationUnitName: ").append(toIndentedString(observationUnitName)).append("\n");

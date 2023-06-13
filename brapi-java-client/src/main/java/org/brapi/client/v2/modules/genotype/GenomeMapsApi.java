@@ -22,8 +22,6 @@ import java.util.Optional;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.brapi.client.v2.ApiCallback;
-import org.brapi.client.v2.BrAPIClient;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.Configuration;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.genotype.GenomeMapQueryParams;
@@ -34,7 +32,6 @@ import org.brapi.v2.model.geno.response.BrAPIGenomeMapSingleResponse;
 import org.brapi.v2.model.geno.response.BrAPILinkageGroupListResponse;
 import org.brapi.v2.model.geno.response.BrAPIMarkerPositionListResponse;
 import org.brapi.v2.model.geno.request.BrAPIMarkerPositionSearchRequest;
-import org.brapi.v2.model.pheno.response.BrAPIObservationUnitListResponse;
 
 public class GenomeMapsApi {
     private BrAPIClient apiClient;

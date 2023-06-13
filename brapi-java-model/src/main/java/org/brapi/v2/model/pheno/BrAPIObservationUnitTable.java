@@ -14,7 +14,7 @@ import org.brapi.v2.model.pheno.BrAPIObservationTableObservationVariables;
 /**
  * ObservationUnitTable
  */
-
+//done
 
 public class BrAPIObservationUnitTable   {
   @JsonProperty("data")

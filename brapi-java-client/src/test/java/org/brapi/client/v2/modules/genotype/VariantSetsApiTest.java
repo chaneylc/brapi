@@ -15,7 +15,6 @@ package org.brapi.client.v2.modules.genotype;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.apache.commons.lang3.tuple.Pair;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.BrAPIClientTest;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.genotype.CallQueryParams;
@@ -28,7 +27,6 @@ import org.brapi.v2.model.geno.request.BrAPIVariantSetsExtractRequest;
 import org.brapi.v2.model.geno.response.BrAPIVariantSetsListResponse;
 import org.brapi.v2.model.geno.request.BrAPIVariantSetsSearchRequest;
 import org.brapi.v2.model.geno.response.BrAPIVariantsListResponse;
-import org.brapi.v2.model.pheno.response.BrAPIObservationUnitListResponse;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;

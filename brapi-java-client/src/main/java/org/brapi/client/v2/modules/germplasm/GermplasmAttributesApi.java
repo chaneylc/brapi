@@ -20,8 +20,6 @@ import java.util.Optional;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.brapi.client.v2.ApiCallback;
-import org.brapi.client.v2.BrAPIClient;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.Configuration;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.germplasm.GermplasmAttributeQueryParams;
@@ -35,7 +33,6 @@ import org.brapi.v2.model.germ.response.BrAPIGermplasmAttributeSingleResponse;
 import com.google.gson.reflect.TypeToken;
 
 import okhttp3.Call;
-import org.brapi.v2.model.pheno.response.BrAPIObservationUnitListResponse;
 
 public class GermplasmAttributesApi {
     private BrAPIClient apiClient;

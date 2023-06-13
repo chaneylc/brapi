@@ -23,8 +23,6 @@ import java.util.Optional;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.brapi.client.v2.ApiCallback;
-import org.brapi.client.v2.BrAPIClient;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.Configuration;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.core.LocationQueryParams;
@@ -33,7 +31,6 @@ import org.brapi.v2.model.core.BrAPILocation;
 import org.brapi.v2.model.core.response.BrAPILocationListResponse;
 import org.brapi.v2.model.core.request.BrAPILocationSearchRequest;
 import org.brapi.v2.model.core.response.BrAPILocationSingleResponse;
-import org.brapi.v2.model.pheno.response.BrAPIObservationUnitListResponse;
 
 public class LocationsApi {
     private BrAPIClient apiClient;

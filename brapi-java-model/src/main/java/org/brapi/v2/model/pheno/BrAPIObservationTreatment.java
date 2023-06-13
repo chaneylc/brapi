@@ -10,7 +10,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * ObservationTreatment
  */
-
+//done
 
 public class BrAPIObservationTreatment   {
   @JsonProperty("factor")

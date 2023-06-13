@@ -34,6 +34,9 @@ public class BrAPIEvent   {
   @Valid
   private List<OffsetDateTime> date = null;
 
+  @JsonProperty("eventDateRange")
+  private BrapiEventEventDateRange eventDateRange = null;
+
   @JsonProperty("eventDbId")
   private String eventDbId = null;
 

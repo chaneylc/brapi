@@ -60,6 +60,9 @@ public class BrAPIObservationUnit {
   @JsonProperty("seedLotDbId")
   private String seedLotDbId = null;
 
+  @JsonProperty("seedLotName")
+  private String seedLotName = null;
+
   @JsonProperty("studyDbId")
   private String studyDbId = null;
 
@@ -384,6 +387,19 @@ public class BrAPIObservationUnit {
 
   public void setStudyDbId(String studyDbId) {
     this.studyDbId = studyDbId;
+  }
+
+  public BrAPIObservationUnit seedLotName(String seedLotName) {
+    this.seedLotName = seedLotName;
+    return this;
+  }
+
+  public String getSeedLotName() {
+    return seedLotName;
+  }
+
+  public void setSeedLotName(String seedLotName) {
+    this.seedLotName = seedLotName;
   }
 
   public BrAPIObservationUnit studyName(String studyName) {

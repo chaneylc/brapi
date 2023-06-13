@@ -14,10 +14,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class BrAPISearchRequestParametersPaging   {
   @JsonProperty("page")
-  private Integer page = null;
+  protected Integer page = null;
 
   @JsonProperty("pageSize")
-  private Integer pageSize = null;
+  protected Integer pageSize = null;
 
   public BrAPISearchRequestParametersPaging page(Integer page) {
     this.page = page;

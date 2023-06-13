@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * ObservationTableObservationVariables
  */
 
-
+ //done
 public class BrAPIObservationTableObservationVariables   {
   @JsonProperty("observationVariableDbId")
   private String observationVariableDbId = null;

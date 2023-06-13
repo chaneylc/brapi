@@ -13,7 +13,6 @@
 package org.brapi.client.v2.modules.phenotype;
 
 import org.apache.commons.lang3.tuple.Pair;
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.phenotype.ImageQueryParams;
 import org.brapi.v2.model.BrAPIAcceptedSearchResponse;
@@ -21,7 +20,6 @@ import org.brapi.v2.model.pheno.BrAPIImage;
 import org.brapi.v2.model.pheno.response.BrAPIImageListResponse;
 import org.brapi.v2.model.pheno.request.BrAPIImageSearchRequest;
 import org.brapi.v2.model.pheno.response.BrAPIImageSingleResponse;
-import org.brapi.v2.model.pheno.response.BrAPIObservationUnitListResponse;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

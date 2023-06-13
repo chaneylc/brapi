@@ -14,7 +14,7 @@ import org.brapi.v2.model.BrAPIMetadata;
  * MethodListResponse
  */
 
-
+//done
 public class BrAPIMethodListResponse implements BrAPIResponse<BrAPIMethodListResponseResult>  {
   @JsonProperty("@context")
   private BrAPIContext _atContext = null;

@@ -23,22 +23,40 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 import lombok.experimental.SuperBuilder;
+import org.brapi.client.v2.BrAPIClient;
+import org.brapi.client.v2.Pair;
+import org.threeten.bp.OffsetDateTime;
 
-import org.brapi.client.v2.model.queryParams.core.BrAPIQueryParams;
+import java.util.List;
+import java.util.Map;
 
 @Getter
 @Setter
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@Accessors(fluent=true)
-public class EventQueryParams extends BrAPIQueryParams {
+@Accessors(fluent = true)
+public class EventQueryParams extends PhenotypeQueryParams {
 
     protected String studyDbId;
     protected String observationUnitDbId;
     protected String eventDbId;
     protected String eventType;
-    protected String dateRangeStart;
-    protected String dateRangeEnd;
+    protected OffsetDateTime dateRangeStart;
+    protected OffsetDateTime dateRangeEnd;
 
+    @Override
+    public void buildQueryParams(BrAPIClient apiClient, List<Pair> localVarQueryParams, Map<String, String> headerParams) {
+        super.buildQueryParams(apiClient, localVarQueryParams, headerParams);
+        if (eventDbId != null)
+            localVarQueryParams.addAll(apiClient.parameterToPair("eventDbId", eventDbId));
+        if (eventType != null)
+            localVarQueryParams.addAll(apiClient.parameterToPair("eventType", eventType));
+        if (dateRangeStart != null)
+            localVarQueryParams.addAll(apiClient.parameterToPair("dateRangeStart", dateRangeStart));
+        if (dateRangeEnd != null)
+            localVarQueryParams.addAll(apiClient.parameterToPair("dateRangeEnd", dateRangeEnd));
+        if (studyDbId != null)
+            localVarQueryParams.addAll(apiClient.parameterToPair("studyDbId", studyDbId));
+    }
 }

@@ -16,6 +16,9 @@ public class BrAPIExternalReference   {
   @JsonProperty("referenceID")
   private String referenceID = null;
 
+  @JsonProperty("referenceId")
+  private String referenceId = null;
+
   @JsonProperty("referenceSource")
   private String referenceSource = null;
 
@@ -36,6 +39,24 @@ public class BrAPIExternalReference   {
 
   public void setReferenceID(String referenceID) {
     this.referenceID = referenceID;
+  }
+
+  public BrAPIExternalReference referenceId(String referenceId) {
+    this.referenceId = referenceId;
+    return this;
+  }
+
+  /**
+   * The external reference ID. Could be a simple string or a URI.
+   *
+   * @return referenceId
+   **/
+  public String getReferenceId() {
+    return referenceId;
+  }
+
+  public void setReferenceId(String referenceId) {
+    this.referenceId = referenceId;
   }
 
   public BrAPIExternalReference referenceSource(String referenceSource) {
@@ -59,7 +80,7 @@ public class BrAPIExternalReference   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -68,20 +89,23 @@ public class BrAPIExternalReference   {
     }
     BrAPIExternalReference externalReferencesInner = (BrAPIExternalReference) o;
     return Objects.equals(this.referenceID, externalReferencesInner.referenceID) &&
-        Objects.equals(this.referenceSource, externalReferencesInner.referenceSource);
+            Objects.equals(this.referenceId, externalReferencesInner.referenceId) &&
+            Objects.equals(this.referenceSource, externalReferencesInner.referenceSource);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(referenceID, referenceSource);
+    return Objects.hash(referenceID, referenceId, referenceSource);
   }
+
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ExternalReferencesInner {\n");
-    
+
     sb.append("    referenceID: ").append(toIndentedString(referenceID)).append("\n");
+    sb.append("    referenceId: ").append(toIndentedString(referenceId)).append("\n");
     sb.append("    referenceSource: ").append(toIndentedString(referenceSource)).append("\n");
     sb.append("}");
     return sb.toString();

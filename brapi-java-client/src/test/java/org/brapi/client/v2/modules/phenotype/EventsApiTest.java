@@ -12,7 +12,6 @@
 
 package org.brapi.client.v2.modules.phenotype;
 
-import org.brapi.client.v2.ApiResponse;
 import org.brapi.client.v2.model.exceptions.ApiException;
 import org.brapi.client.v2.model.queryParams.phenotype.EventQueryParams;
 import org.brapi.v2.model.pheno.response.BrAPIEventsResponse;
@@ -47,7 +46,7 @@ public class EventsApiTest {
         Integer pageSize = null;
         
         EventQueryParams queryParams = new EventQueryParams();
-        ApiResponse<BrAPIEventsResponse> response = api.eventsGet(queryParams);
+        BrAPIEventsResponse response = api.eventsGet(queryParams);
 
         // TODO: test validations
     }

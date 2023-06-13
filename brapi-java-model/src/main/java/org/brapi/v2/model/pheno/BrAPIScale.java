@@ -52,6 +52,12 @@ public class BrAPIScale {
 	@JsonProperty("scaleDbId")
 	private String scaleDbId = null;
 
+	@JsonProperty("scalePUI")
+	private String scalePUI = null;
+
+	@JsonProperty("units")
+	private String units = null;
+
 	private final transient Gson gson = new Gson();
 
 	public BrAPIScale additionalInfo(JsonObject additionalInfo) {
@@ -184,12 +190,31 @@ public class BrAPIScale {
 		return this;
 	}
 
-	/**
-	 * Get validValues
-	 *
-	 * @return validValues
-	 **/
+	public BrAPIScale scalePUI(String scalePUI) {
+		this.scalePUI = scalePUI;
+		return this;
+	}
 
+	public String getScalePUI() {
+		return scalePUI;
+	}
+
+	public void setScalePUI(String scalePUI) {
+		this.scalePUI = scalePUI;
+	}
+
+	public BrAPIScale units(String units) {
+		this.units = units;
+		return this;
+	}
+
+	public String getUnits() {
+		return units;
+	}
+
+	public void setUnits(String units) {
+		this.units = units;
+	}
 
 	@Valid
 	public BrAPIScaleValidValues getValidValues() {
@@ -221,7 +246,7 @@ public class BrAPIScale {
 	}
 
 	@Override
-	public boolean equals(java.lang.Object o) {
+	public boolean equals(Object o) {
 		if (this == o) {
 			return true;
 		}
@@ -229,30 +254,38 @@ public class BrAPIScale {
 			return false;
 		}
 		BrAPIScale scale = (BrAPIScale) o;
-		return Objects.equals(this.scaleDbId, scale.scaleDbId)
-				&& Objects.equals(this.dataType, scale.dataType)
-				&& Objects.equals(this.decimalPlaces, scale.decimalPlaces)
-				&& Objects.equals(this.externalReferences, scale.externalReferences)
-				&& Objects.equals(this.ontologyReference, scale.ontologyReference)
-				&& Objects.equals(this.scaleName, scale.scaleName)
-				&& Objects.equals(this.validValues, scale.validValues);
+		return Objects.equals(this.additionalInfo, scale.additionalInfo) &&
+				Objects.equals(this.dataType, scale.dataType) &&
+				Objects.equals(this.decimalPlaces, scale.decimalPlaces) &&
+				Objects.equals(this.externalReferences, scale.externalReferences) &&
+				Objects.equals(this.ontologyReference, scale.ontologyReference) &&
+				Objects.equals(this.scaleDbId, scale.scaleDbId) &&
+				Objects.equals(this.scaleName, scale.scaleName) &&
+				Objects.equals(this.scalePUI, scale.scalePUI) &&
+				Objects.equals(this.units, scale.units) &&
+				Objects.equals(this.validValues, scale.validValues);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(scaleDbId, dataType, decimalPlaces, externalReferences, ontologyReference, scaleName, validValues);
+		return Objects.hash(additionalInfo, dataType, decimalPlaces, externalReferences, ontologyReference, scaleDbId, scaleName, scalePUI, units, validValues);
 	}
+
 
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("class ScaleBaseClass {\n");
-		sb.append("    scaleDbId: ").append(toIndentedString(scaleDbId)).append("\n");
+		sb.append("class Scale {\n");
+
+		sb.append("    additionalInfo: ").append(toIndentedString(additionalInfo)).append("\n");
 		sb.append("    dataType: ").append(toIndentedString(dataType)).append("\n");
 		sb.append("    decimalPlaces: ").append(toIndentedString(decimalPlaces)).append("\n");
 		sb.append("    externalReferences: ").append(toIndentedString(externalReferences)).append("\n");
 		sb.append("    ontologyReference: ").append(toIndentedString(ontologyReference)).append("\n");
+		sb.append("    scaleDbId: ").append(toIndentedString(scaleDbId)).append("\n");
 		sb.append("    scaleName: ").append(toIndentedString(scaleName)).append("\n");
+		sb.append("    scalePUI: ").append(toIndentedString(scalePUI)).append("\n");
+		sb.append("    units: ").append(toIndentedString(units)).append("\n");
 		sb.append("    validValues: ").append(toIndentedString(validValues)).append("\n");
 		sb.append("}");
 		return sb.toString();
